@@ -1,0 +1,262 @@
+@charset "utf-8";
+* {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  font-family: "맑은 고딕";
+  color: #333333;
+}
+body {
+  width: 1000px;
+  height: 550px;
+  background-color: #ffffff;
+  font-size: 20px;
+}
+a {
+  text-decoration: none;
+  display: block;
+}
+
+header {
+  float: left;
+  position: absolute;
+}
+.top {
+  float: left;
+  width: 200px;
+  height: 650px;
+}
+.logo {
+  float: left;
+  width: 200px;
+  height: 40px;
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
+.menu {
+  float: left;
+  top: 100px;
+  left: 10px;
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+}
+.nav > li {
+  float: left;
+  width: 180px;
+}
+.navi > li > a {
+  width: 180px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #333333;
+  color: #ffffff;
+}
+.navi > li > a:hover {
+  background-color: #eeeeee;
+  color: #000000;
+}
+.submenu {
+  float: left;
+  width: 180px;
+  height: 100%;
+  left: 180px;
+  top: 0px;
+  position: absolute;
+  background-color: #cccccc;
+  display: none;
+  z-index: 1;
+}
+.submenu > li > a {
+  width: 180px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #cccccc;
+  color: #ffffff;
+}
+.submenu > li > a:hover {
+  background-color: #999999;
+  color: #ffff00;
+}
+.imgslide {
+  float: right;
+  width: 800px;
+  height: 350px;
+  position: relative;
+}
+.imgslide > a {
+  display: block;
+  position: absolute;
+}
+.imgslide span {
+  width: 160px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  left: 40%;
+  top: 45%;
+  position: absolute;
+  background-color: rgba(200, 200, 200, 0.5);
+}
+.contents {
+  float: right;
+  width: 800px;
+  height: 200px;
+}
+.notice {
+  float: left;
+  width: 300px;
+  height: 200px;
+}
+.tab {
+  float: left;
+  width: 300px;
+}
+.notice h4 {
+  float: left;
+  height: 50px;
+  line-height: 50px;
+}
+.notice ul {
+  float: left;
+  height: 30px;
+  width: 280px;
+  line-height: 30px;
+  font-size: 14px;
+}
+.notice li span {
+  float: right;
+}
+.notice li:hover {
+  font-weight: bold;
+}
+.gallery {
+  float: left;
+  width: 300px;
+  height: 200px;
+}
+.gallery h4 {
+  float: left;
+  height: 50px;
+  line-height: 50px;
+}
+.gallery ul li {
+  float: left;
+  padding: 10px;
+  margin-top: 10px;
+}
+.gallery img {
+  width: 80px;
+  height: 80px;
+}
+.gallery li:hover {
+  opacity: 0.5;
+}
+.shortcut {
+  float: left;
+  width: 200px;
+  height: 200px;
+}
+.shortcut img {
+  float: right;
+  width: 180px;
+  height: 180px;
+  padding: 10px;
+}
+.sctext {
+  width: 100px;
+  text-align: center;
+  font-weight: bold;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-top: 85px;
+  margin-left: 50px;
+}
+#modal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  display: none;
+}
+#modal.active {
+  display: block;
+}
+.modal_up {
+  width: 400px;
+  height: 300px;
+  position: fixed;
+  left: 30%;
+  top: 20%;
+  background-color: #ffffff;
+}
+.uptitle {
+  margin-top: 30px;
+  text-align: center;
+  line-height: 16px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.upbody {
+  padding: 30px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 30px;
+}
+.btn {
+  font-weight: bold;
+  background: #cccccc;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+footer {
+  float: right;
+}
+.bottom {
+  float: right;
+  width: 800px;
+  height: 100px;
+  background-color: #cccccc;
+}
+.btlogo {
+  float: left;
+  width: 200px;
+  height: 100px;
+}
+.btlogo img {
+  float: left;
+  width: 200px;
+  height: 40px;
+  margin-top: 25px;
+  margin-left: 10px;
+}
+.copy {
+  float: left;
+  width: 400px;
+  height: 100px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 100px;
+}
+.familysite {
+  float: right;
+  width: 200px;
+  height: 100px;
+}
+.familysite select {
+  float: right;
+  height: 30px;
+  width: 190px;
+  margin-top: 20px;
+  margin-right: 10px;
+  font-size: 14px;
+}
