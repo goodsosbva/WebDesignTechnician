@@ -40,7 +40,6 @@ header {
   float: right;
   width: 800px;
   height: 100px;
-  z-index: 1;
 }
 
 .navi {
@@ -90,13 +89,15 @@ header {
 }
 
 .bodywrap {
-  height: 1200px;
+  width: 1200px;
   height: 500px;
 }
 
 .imgslide {
   width: 1200px;
   height: 300px;
+  position: relative;
+  overflow: hidden;
 }
 
 .slidelist {
@@ -112,18 +113,113 @@ header {
   width: 500px;
   height: 50px;
   position: absolute;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  line-height: 50px;
+  background-color: rgba(40, 40, 40, 0.5);
+  margin-left: 350px;
+  margin-top: 125px;
 }
 
 .contents {
   float: left;
   width: 1200px;
   height: 200px;
+  position: absolute;
+  margin: auto;
 }
 
 .tabmenu {
+  float: left;
+  width: 395px;
+  height: 180px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.tabmenu > li {
+  float: left;
+  width: 100px;
+  line-height: 30px;
+}
+
+.tabmenu > li > a {
+  display: block;
+  font-style: 16px;
+  text-align: center;
+  background-color: #cccccc;
+  border: 1px solid #dddddd;
+  border-bottom: none;
+}
+
+.tabmenu > li > a:hover {
+  background-color: #eeeeee;
+}
+
+.tabmenu > li:first-child a {
+  border-right: none;
+}
+
+.tabmenu > li.active > a {
+  background-color: #ffffff;
+}
+
+.tabmenu > li div {
+  position: absolute;
+  left: 0px;
+  height: 0px;
+  overflow: hidden;
+}
+
+.tabmenu > li.active div {
+  width: 393px;
+  height: 148px;
+  border: 1px solid #dddddd;
+  z-index: 1;
+}
+
+.notice ul {
+  float: left;
+  width: 393px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.notice li {
+  height: 32px;
+  line-height: 32px;
+  font-size: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.notice li:nth-child(2n) {
+  background-color: #cccccc;
+}
+
+.notice li span {
   float: right;
-  width: 400px;
-  height: 200px;
+}
+
+.notice li:hover {
+  font-weight: bold;
+}
+
+.gallery li {
+  float: left;
+  margin-top: 15px;
+  margin-left: 5px;
+}
+
+.gallery img {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
+
+.gallery li:hover {
+  opacity: 0.5;
 }
 
 .otherwrap {
@@ -134,14 +230,53 @@ header {
 
 .banner {
   float: left;
-  width: 400px;
-  height: 200px;
+  width: 395px;
+  height: 180px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.banner img {
+  float: left;
+  width: 395px;
+  height: 180px;
+}
+
+.bntext {
+  float: left;
+  width: 300px;
+  height: 40px;
+  position: absolute;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  line-height: 40px;
+  background-color: rgba(40, 40, 40, 0.3);
+  left: 450px;
+  top: 80px;
+}
+
+.banner img:hover {
+  opacity: 0.5;
 }
 
 .shortcut {
   float: right;
-  width: 400px;
-  height: 200px;
+  width: 395px;
+  height: 180px;
+}
+
+.sctext {
+  float: left;
+  width: 300px;
+  height: 40px;
+  position: absolute;
+  left: 850px;
+  top: 80px;
+  color: #ffffff;
+  background-color: rgba(40, 40, 40, 0.3);
+  font-weight: bold;
+  text-align: center;
 }
 
 footer {
@@ -156,14 +291,45 @@ footer {
   height: 100px;
 }
 
+.btlogo img {
+  float: left;
+  width: 200px;
+  height: 80px;
+  margin-top: 10px;
+  margin-left: 25px;
+}
+
 .copy {
   float: left;
   width: 800px;
   height: 100px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 100px;
 }
 
 .sns {
   float: right;
   width: 200px;
   height: 100px;
+}
+
+.sns ul {
+  float: right;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+.sns li {
+  display: inline-block;
+}
+
+.sns img {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+}
+
+.sns img:hover {
+  opacity: 0.5;
 }
