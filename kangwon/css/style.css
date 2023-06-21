@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    font-family: "맑은 고딕";
+    color: #333333;
+  }
+  
+  html,
+  body {
+    min-width: 1200px;
+    background-color: #ffffff;
+    font-size: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    display: block;
+  }
+
+  .wrap {
+    width: 1200px;
+  }
+
+  .logo {
+    float: left;
+    width: 250px;
+    height: 100px;
+  }
+
+  .logo img {
+    float: left;
+    width: 200px;
+    height: 40px;
+    margin-top: 30px;
+    margin-left: 25px;
+  }
+
+  #menu_bg {
+    width: 1200px;
+    height: 160px;
+    position: absolute;
+    display: none;
+    z-index: 2;
+    top: 100px;
+    background-color: #bbbbbb;
+  }
+
+  .menu {
+    float: right;
+    width: 800px;
+    height: 100px;
+  }
+
+  .navi {
+    float: right;
+    margin-top: 50px;
+    margin-right: 0px;
+  }
+
+  .navi > li {
+    float: left;
+  }
+
+  /* 배너별 대제목에 해당 */
+  .navi > li > a {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    border-color: #333333;
+    color: cornflowerblue;
+  }
+
+  .navi > li > a:hover {
+    color: crimson;
+  }
+
+  .submenu {
+    width: 200px;
+    height: 160px;
+    position: absolute;
+    display: none;
+    z-index: 3;
+    background-color: #bbbbbb;
+  }
+
+  .submenu > li > a {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-color: #333333;
+    color: #333333;
+  }
+
+  .imgslide {
+    width: 1200px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .imgslide > a {
+    display: block;
+    position: absolute;
+  }
+
+  .imgslide span {
+    width: 300px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    left: 40%; 
+    right: 40%;
+    position: absolute;
+    background-color: rgba(100, 100, 100, 0.7);
+  }
+
+  .contents {
+    width: 1200px;
+    height: 700px;
+  }
+
+  .notice {
+    float: left;
+    width: 400px;
+    height: 500px;
+  }
+
+  .tab {
+    float: left;
+    width: 400px;
+    font-size: 30px;
+    font-weight: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .notice > div {
+    float: left;
+    width: 380px;
+    border-bottom-color: skyblue;
+    border-bottom-style: solid;
+    margin-left: 10px;
+  }
+  
+
