@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>전국미술작품</title>
-    <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
     <script src="javascript/jquery-3.7.0.min.js"></script>
     <script src="javascript/script.js"></script>
   </head>
@@ -87,25 +87,86 @@
       </div>
       <div class="contents">
         <ul class="tabmenu">
-          <li>
-            <div class="notice">notice</div>
+          <li class="active">
+            <a href="#">공지사항</a>
+            <div class="notice">
+              <ul>
+                <li>
+                  <a href="#">
+                    전국 미술작품 공지사항 1
+                    <span>2023.06.22</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    전국 미술작품 공지사항 2
+                    <span>2023.06.22</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    전국 미술작품 공지사항 3
+                    <span>2023.06.22</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li>
-            <div class="gallery"></div>
+            <a href="#">갤러리</a>
+            <div class="gallery">
+              <ul>
+                <li>
+                  <a href="#"><img src="images/gal1.png" alt="gallery1" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/gal2.png" alt="gallery2" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/gal3.png" alt="gallery3" /></a>
+                </li>
+              </ul>
+            </div>
           </li>
         </ul>
-      </div>
-      <div class="otherwrap">
-        <div class="banner">banner</div>
-        <div class="shortcut">shortcut</div>
+        <div class="otherwrap">
+          <div class="banner">
+            <a href="#">
+              <h4 class="bntext">BANNER</h4>
+              <img src="images/banner.png" alt="banner" />
+            </a>
+          </div>
+          <div class="shortcut">
+            <a href="#">
+              <h4 class="sctext">SHORTCUT</h4>
+              <img src="images/banner.png" alt="banner" />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
 
     <footer>
       <div class="wrap">
-        <div class="btlogo">btlogo</div>
-        <div class="copy">copy</div>
-        <div class="sns">sns</div>
+        <div class="btlogo">
+          <a href="#">
+            <img src="images/logo.png" alt="btlogo" />
+          </a>
+        </div>
+        <div class="copy">copyright by khs. all rights reserved</div>
+        <div class="sns">
+          <ul>
+            <li>
+              <a href="#"><img src="images/sns1.png" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/sns2.png" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/sns3.png" alt="" /></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
   </body>
