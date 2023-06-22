@@ -1,0 +1,217 @@
+@charset "utf-8";
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  font-family: "맑은 고딕";
+  color: #333333;
+}
+
+body {
+  width: 1000px;
+  height: 650px;
+  background-color: #fff;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+header {
+  float: left;
+  position: absolute;
+}
+
+.wrap {
+  float: left;
+  width: 200px;
+  height: 650px;
+  background-color: #ccc;
+}
+
+.logo {
+  float: left;
+  width: 200px;
+  height: 40px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.menu {
+  float: left;
+  top: 100px;
+  left: 10px;
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+}
+
+.navi > li {
+  float: left;
+  width: 180px;
+}
+
+.navi > li > a {
+  width: 180px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #333;
+  color: #fff;
+}
+
+.navi > li > a:hover {
+  background-color: #ccc;
+  color: #000;
+}
+
+.submenu {
+  float: left;
+  width: 180px;
+  height: 250px;
+  /* 오른쪽으로 가게된 이유 너비 만큼 오른쪽으로 이동 */
+  left: 180px;
+  top: -20px;
+  position: absolute;
+  background-color: #999;
+  display: none;
+  z-index: 1;
+}
+
+.submenu > li > a {
+  width: 180px;
+  height: 40px;
+  line-height: 40px;
+  font-style: 14px;
+  font-weight: bold;
+  background-color: #999;
+  color: #333;
+}
+
+.submenu > li > a:hover {
+  background-color: #ccc;
+  color: #ffff00;
+}
+
+.imgslide {
+  float: right;
+  width: 800px;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slidelist {
+  width: 800px;
+  float: left;
+}
+
+.slidelist ul li {
+  width: 800px;
+  float: left;
+}
+
+.slidelist span {
+  width: 400px;
+  height: 50px;
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  line-height: 50px;
+  background-color: rgba(40, 40, 40, 0.5);
+  margin-left: 200px;
+  margin-top: 150px;
+}
+
+.contents {
+  float: right;
+  width: 800px;
+  height: 200px;
+}
+
+footer {
+  float: right;
+  width: 800px;
+  height: 100px;
+  background-color: #30a3f3;
+}
+
+.notice {
+  float: left;
+  width: 300px;
+  height: 200px;
+}
+
+.tab {
+  float: left;
+  width: 300px;
+}
+
+.notice h4 {
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  margin-left: 10px;
+}
+
+.notice ul {
+  float: left;
+  width: 290px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.notice li span {
+  float: right;
+}
+
+.notice li:nth-child(2n) {
+  background-color: #ccc;
+}
+
+.notice li:hover {
+  font-weight: bold;
+}
+
+.gallery {
+  float: left;
+  width: 300px;
+  height: 200px;
+}
+
+.shortcut {
+  float: left;
+  width: 200px;
+  height: 200px;
+}
+
+.btlogo {
+  float: right;
+  width: 200px;
+  height: 100px;
+}
+
+.site {
+  float: right;
+  width: 600px;
+  height: 100px;
+}
+
+.btmenu {
+  float: right;
+  width: 600px;
+  height: 50px;
+}
+
+.copy {
+  float: right;
+  width: 600px;
+  height: 50px;
+}
