@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #333;
+}
+
+body {
+  width: 1000px;
+  height: 650px;
+  background-color: #fff;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+header {
+  float: left;
+}
+
+.top {
+  float: left;
+  width: 200px;
+  height: 650px;
+}
+
+.logo {
+  float: left;
+  width: 200px;
+  height: 40px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.menu {
+  float: left;
+}
+
+.imgslide {
+  float: right;
+  width: 800px;
+  height: 350px;
+}
+
+.contents {
+  float: right;
+  width: 800px;
+  height: 250px;
+}
+
+.notice {
+  float: left;
+  width: 300px;
+  height: 200px;
+}
+
+.gallery {
+  float: left;
+  width: 300px;
+  height: 200px;
+}
+
+.shortcut {
+  float: right;
+  width: 200px;
+  height: 200px;
+}
+
+footer {
+  float: right;
+}
+
+.bottom {
+  float: right;
+  width: 800px;
+  height: 150px;
+}
+
+.btlogo {
+  float: left;
+  width: 200px;
+  height: 100px;
+}
+
+.copy {
+  float: left;
+  width: 400px;
+  height: 100px;
+}
+
+.familysite {
+  float: right;
+  width: 200px;
+  height: 100px;
+}

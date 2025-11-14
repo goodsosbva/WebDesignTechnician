@@ -1,0 +1,381 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #333;
+}
+
+body {
+  height: 700px;
+  background-color: #fff;
+  width: 1200px;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  background: #ddd;
+}
+
+.wrap {
+  width: 1200px;
+}
+
+.logo {
+  float: left;
+  width: 250px;
+  height: 100px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.menu {
+  float: right;
+  width: 800px;
+  height: 100px;
+  z-index: 1;
+}
+
+.navi {
+  float: right;
+  margin-top: 30px;
+  margin-right: 10px;
+}
+
+.navi > li {
+  float: left;
+}
+
+.navi > li > a {
+  width: 180px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+}
+
+.navi > li > a:hover {
+  background-color: #30a3f3;
+}
+
+.submenu {
+  width: 180px;
+  height: 160px;
+  position: absolute;
+  display: none;
+  z-index: 1;
+  background: #fff;
+}
+
+.submenu > li > a {
+  width: 180px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  background: #fff;
+  color: #333;
+}
+
+.submenu > li > a:hover {
+  background-color: #30a3f3;
+}
+
+.imgslide {
+  width: 1200px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slidelist {
+  width: 1200px;
+  height: 900px;
+}
+
+.slidelist ul li {
+  width: 1200px;
+  height: 300px;
+  /* float: left; 제거 - 세로로 쌓이게 */
+}
+
+.slidelist span {
+  width: 500px;
+  height: 50px;
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  line-height: 50px;
+  background-color: rgba(40, 40, 40, 0.5);
+  margin-left: 350px;
+  margin-top: 125px;
+}
+
+/*컨텐츠*/
+.contents {
+  width: 100%;
+  height: 200px;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+/*컨텐츠 공통사항*/
+.contents > div {
+  width: 33.3%;
+  position: relative;
+}
+.contents > div:nth-of-type(2) {
+  margin: 0 10px;
+}
+
+/*탭메뉴 : 공지사항 갤러리 */
+.tabmenu {
+  width: 100%;
+  height: 100%;
+}
+.tabmenu > li {
+  float: left;
+  position: relative;
+}
+.tabmenu > li > a {
+  padding: 0 10px;
+  min-width: 85px;
+  line-height: 30px;
+  font-size: 14px;
+  text-align: center;
+  background: #eeeeee;
+  border: 1px solid #dddddd;
+  display: block;
+}
+.tabmenu > li > a:hover {
+  background-color: #eeeeee;
+}
+
+/* 공지사항과 갤러리 탭 맞닿는 부분에 보더를 없애줌 */
+.tabmenu > li:first-child a {
+  border-right: none;
+}
+/* 활성화된 탭의 스타일 */
+.tabmenu > li.active > a {
+  font-weight: bold;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+/*탭 콘텐츠 영역 스타일*/
+.tabBG {
+  position: absolute;
+  overflow: hidden;
+  height: 0px;
+  background: #ffffff;
+  top: 30px;
+  left: 0;
+  width: 393px;
+  border: 1px solid #dddddd;
+  border-top: none;
+}
+/*active 클래스가 추가된 탭 콘텐츠 영역 스타일*/
+.tabmenu > li.active .tabBG {
+  height: 168px;
+  z-index: 1;
+}
+
+.tabBG gallery {
+  left: -107px;
+}
+/* 공지사항 */
+.notice ul {
+  padding: 10px 0;
+  margin: 0;
+  list-style: none;
+}
+.notice ul li {
+  padding: 8px 20px;
+  margin: 0;
+  font-size: 14px;
+  border-bottom: 1px solid #f0f0f0;
+  line-height: 1.4;
+}
+.notice ul li:last-child {
+  border-bottom: none;
+}
+/*공지사항 중 2배수 리스트 스타일*/
+.notice li:nth-child(even) {
+  background: rgba(114, 63, 251, 0.1);
+}
+.notice li:hover {
+  color: #222328;
+  background: rgba(246, 182, 44, 0.1);
+}
+.notice li span {
+  float: right;
+  color: #999;
+  font-size: 12px;
+} /* 날짜 오른쪽 정렬 */
+
+.gallery ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  margin: 0;
+  list-style: none;
+  gap: 10px;
+}
+.gallery li {
+  width: 80px;
+  height: 60px;
+}
+.gallery li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.gallery li:hover {
+  opacity: 0.7;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.otherwrap {
+  float: right;
+  width: 400px;
+  height: 200px;
+}
+
+.banner {
+  float: left;
+  width: 300px;
+  height: 200px;
+}
+
+.shortcut {
+  float: right;
+  width: 300px;
+  height: 200px;
+}
+
+#layer {
+  position: absolute;
+  z-index: 1;
+  display: none;
+}
+
+#layer.active {
+  display: block;
+}
+
+.layer_up {
+  width: 500px;
+  height: 400px;
+  position: fixed;
+  left: 30%;
+  top: 20%;
+  background-color: #fff;
+}
+
+.uptitle {
+  margin-top: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+
+.upbody {
+  padding: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 16px;
+  color: #000;
+}
+
+.btn {
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #333;
+  border-radius: 5px;
+  text-align: center;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: cornflowerblue;
+}
+
+.uptitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+
+.btlogo {
+  float: left;
+  width: 250px;
+  height: 100px;
+}
+
+.btlogo img {
+  float: left;
+  width: 200px;
+  margin-top: 10px;
+  margin-left: 25px;
+}
+
+.site {
+  float: right;
+  width: 600px;
+  height: 100px;
+}
+
+.tabmenu {
+  width: 600px;
+  height: 50px;
+}
+
+.btmenu {
+  width: 600px;
+  height: 50px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 50px;
+}
+
+.btmenu li {
+  margin-top: 10px;
+  display: inline-block;
+  width: 100px;
+}
+
+.btmenu li:hover {
+  font-weight: bold;
+}
+
+.copy {
+  width: 600px;
+  height: 50px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 50px;
+}

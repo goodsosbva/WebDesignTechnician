@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.body {
+  display: flex;
+  height: 1000px;
+}
+
+.menu {
+  flex-shrink: 0;
+  width: 200px;
+}
+
+.logo img {
+  width: 200px;
+  height: 100px;
+  padding-right: 15px;
+  background: #fff;
+}
+
+.menu ul {
+  padding: 10px; /* 외부 border와의 간격 */
+  margin: 5px;
+}
+
+.sub a {
+  border: 1px solid #000;
+  padding: 5px;
+  display: block;
+}
+
+.sub ul {
+  margin: 0;
+  padding: 0;
+  border: 1px solid #000;
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+.sub ul.show {
+  visibility: visible;
+  opacity: 1;
+  max-height: 500px;
+}
+
+.sub ul > li {
+  border-top: 1px solid #000; /* 1. border-top 사용 */
+  padding: 10px; /* 3. padding 유지 */
+  margin: 0; /* 2. margin 제거 */
+}
+
+.sub ul > li:hover {
+  background-color: aqua;
+}
+
+.sub ul > li:first-child {
+  border-top: none; /* 4. 첫 번째 border 제거 */
+}
+
+.contents {
+  background-color: #888;
+  flex-shrink: 0;
+  width: 400px;
+}
+
+.imgs {
+  background-color: #777;
+  flex-shrink: 0;
+  width: calc(100% - 200px - 400px);
+}
+
+footer {
+  display: flex;
+  height: 100px;
+}
+
+.blogo {
+  background-color: #666;
+  flex-shrink: 0;
+  width: 200px;
+}
+
+.bmenu {
+  background-color: #555;
+  flex-shrink: 0;
+  width: 400px;
+}
+
+.bsite {
+  background-color: #444;
+  flex-shrink: 0;
+  width: calc(100% - 200px - 400px);
+}
