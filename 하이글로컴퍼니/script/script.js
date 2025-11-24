@@ -20,7 +20,6 @@ function solution() {
   const totalSlides = slides.length;
 
   function moveSlide() {
-    console.log("hello", idx);
     if (idx == 2) {
       slides.forEach(function (slide) {
         slide.classList.add("no-transition");
