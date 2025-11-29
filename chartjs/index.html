@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart.js Data Preprocessing</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div style="width: 700px;">
+        <canvas id="myDynamicStackedChart"></canvas>
+    </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // 캔버스 요소
+    const ctx = document.getElementById('myDynamicStackedChart').getContext('2d');
+    
+    // 🚀 원본 데이터 (하나의 막대에 여러 타입이 포함된 형태)
+    const rawData = [
+        [[10, '위험'], [20, '일반'], [30, '심각']], // 첫 번째 막대
+        [[5, '위험'], [30, '일반'], [25, '심각']],  // 두 번째 막대
+        [[15, '위험'], [15, '일반'], [40, '심각']] // 세 번째 막대
+    ];
+
+    // X축 레이블 (가정: 막대의 순서대로 'Day 1', 'Day 2', 'Day 3'으로 지정)
+    const labels = ['Day 1', 'Day 2', 'Day 3'];
+
+    // 🎨 타입별 색상 매핑 (선택 사항: 시각적 구분을 위해 정의)
+    const colorMap = {
+        '위험': 'rgba(255, 99, 132, 0.8)', // 붉은색
+        '일반': 'rgba(54, 162, 235, 0.8)', // 푸른색
+        '심각': 'rgba(255, 206, 86, 0.8)'  // 노란색
+    };
+
+    // --- 1단계: 모든 고유 타입(스택 레이블) 추출 ---
+    const uniqueTypes = new Set();
+    rawData.forEach(barData => {
+        barData.forEach(item => {
+            uniqueTypes.add(item[1]); // item[1]은 '위험', '일반', '심각'
+        });
+    });
+    const typeLabels = Array.from(uniqueTypes); // ['위험', '일반', '심각']
+
+    // --- 2단계: Chart.js 포맷에 맞게 데이터셋 생성 ---
+    const datasets = typeLabels.map(type => {
+        // 각 타입별 데이터 배열을 만듭니다. (예: 위험 데이터셋의 data)
+        const dataForType = rawData.map(barData => {
+            // 현재 막대(barData)에서 해당 타입(type)의 값을 찾습니다.
+            const item = barData.find(d => d[1] === type);
+            return item ? item[0] : 0; // 값이 있으면 해당 값(숫자)을, 없으면 0을 반환
+        });
+
+        // Chart.js 데이터셋 객체 반환
+        return {
+            label: type,
+            data: dataForType,
+            backgroundColor: colorMap[type],
+            borderColor: colorMap[type].replace('0.8', '1'),
+            borderWidth: 1
+        };
+    });
+
+    // --- 3단계: Chart.js 렌더링 ---
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: datasets,
+        },
+        options: {
+            responsive: true,
+            scales: {
+                x: {
+                    stacked: true // X축 스택 활성화
+                },
+                y: {
+                    beginAtZero: true,
+                    stacked: true // Y축 스택 활성화
+                }
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: '동적 데이터 기반 스택형 막대 그래프'
+                },
+                tooltip: {
+                    mode: 'index',
+                    intersect: false
+                }
+            }
+        }
+    });
+});
+</script>
+</body>
+</html>
