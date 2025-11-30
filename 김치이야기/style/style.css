@@ -1,0 +1,202 @@
+@charset "utf-8";
+
+* {
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.wrap {
+  width: 100%;
+  display: flex;
+  height: calc(100vh - 120px);
+}
+
+header {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  background-color: #133;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  background-color: #144;
+  flex:1
+}
+
+.stitle {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.stitle:hover {
+  background-color: #451;
+}
+
+.smenu {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-right: 10px;
+  border: 1px solid black;
+  background-color: #888;
+}
+
+.submenus {
+  display: none;
+}
+
+.submenu:hover {
+  background-color: #811;
+}
+
+.stitle {
+  border-bottom: 1px solid black;
+}
+
+.contents {
+  display:flex;
+  flex: 1;
+}
+
+.content {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  background-color: #233;
+}
+
+.banner {
+  flex: 0.2;
+  background-color: #611;
+  display: flex;
+}
+
+.banner-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.banner p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-img img {
+  width: 100px;
+  height: 100px;
+  margin-right: 15px;
+  margin-left: 15px !important;
+
+  object-fit: cover;
+}
+
+.banner-arrow {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-arrow img {
+  width: 50px;
+  height: 50px;
+
+  object-fit: cover;
+}
+
+.notice {
+  flex: 0.4;
+  background-color: #622;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.notice-tab {
+  display: flex;
+  justify-content: center;
+  margin-left: 10px;
+  width: 100px;
+  border-top: 1px solid black;
+}
+
+.notice-titles {
+  border: 1px solid black;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.notice-title {
+  display: flex;
+}
+
+.notice-title a {
+  flex: 0.7;
+}
+
+.notice-title:hover {
+  background-color: #abc;
+}
+
+.notice-title p {
+  flex: 0.3;
+}
+
+.gallery {
+  flex: 0.4;
+  background-color: #633;
+}
+
+.shortcut {
+  flex: 0.2;
+  background-color: #644;
+}
+
+.slides {
+  flex: 1;
+  background-color: #344;
+}
+
+footer {
+  display: flex;
+  height: 120px;
+}
+
+.blogo {
+  width: 200px;
+  background-color: #433;
+}
+
+.bcontent {
+  flex: 1;
+  background-color: #533;
+  display: flex;
+  flex-direction: column;
+}
+
+.bsite {
+  height: 60px;
+  background-color: #644;
+}
+
+.copyright {
+  height: 60px;
+  height: #744;
+}
+
+
