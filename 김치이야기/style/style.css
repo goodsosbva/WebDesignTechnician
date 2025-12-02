@@ -19,19 +19,23 @@ header {
   width: 200px;
   display: flex;
   flex-direction: column;
+  background-color: #664fad;
 }
 
 .logo {
-  background-color: #133;
   height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.logo img {
+  margin-right: 5px;
+}
+
 .menu {
-  background-color: #144;
-  flex:1
+  flex: 1;
+  margin-left: -15px;
 }
 
 .stitle {
@@ -50,7 +54,6 @@ header {
   margin-left: 20px;
   margin-right: 10px;
   border: 1px solid black;
-  background-color: #888;
 }
 
 .submenus {
@@ -66,7 +69,7 @@ header {
 }
 
 .contents {
-  display:flex;
+  display: flex;
   flex: 1;
 }
 
@@ -74,12 +77,10 @@ header {
   width: 400px;
   display: flex;
   flex-direction: column;
-  background-color: #233;
 }
 
 .banner {
   flex: 0.2;
-  background-color: #611;
   display: flex;
 }
 
@@ -87,7 +88,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .banner p {
@@ -121,7 +121,6 @@ header {
 
 .notice {
   flex: 0.4;
-  background-color: #622;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -159,17 +158,81 @@ header {
 
 .gallery {
   flex: 0.4;
-  background-color: #633;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.gallery-tab {
+  border-top: 1px solid black;
+  width: 100px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  text-align: center;
+}
+
+.gallery-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.gal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.gal img {
+  margin-top: 25px;
 }
 
 .shortcut {
   flex: 0.2;
-  background-color: #644;
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  justify-items: spac;
+  text-align: center;
+
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .slides {
   flex: 1;
-  background-color: #344;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.slide {
+  flex-shrink: 0;
+  flex: 0 0 100%;
+  min-height: 100%;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slides p {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
 }
 
 footer {
@@ -179,24 +242,75 @@ footer {
 
 .blogo {
   width: 200px;
-  background-color: #433;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  background-color: #664fad;
+}
+
+.blogo img {
+  width: 100%;
 }
 
 .bcontent {
   flex: 1;
-  background-color: #533;
   display: flex;
   flex-direction: column;
+  background-color: #d4cfcf;
 }
 
 .bsite {
   height: 60px;
-  background-color: #644;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bsite a {
+  padding: 0 8px;
 }
 
 .copyright {
   height: 60px;
   height: #744;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, -70%);
+  background-color: #9c63f7;
+  width: 500px;
+  height: 300px;
+  display: none;
+}
+
+.modal-title {
+  margin-bottom: 20px;
+}
+
+.modal-title h1 {
+  color: white;
+  display: flex;
+  :center ;
+}
+
+.modal-content h4 {
+  color: white;
+}
+
+.modal-cancel {
+  margin-top: 130px;
+  margin-left: 430px;
+}
+
+button {
+  padding: 10px;
+  background-color: purple;
+  color: white;
+}
 
