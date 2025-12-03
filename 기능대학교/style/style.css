@@ -6,6 +6,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: black;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .wrap {
@@ -19,7 +28,7 @@ header {
   width: 1340px;
   height: 100px;
   display: flex;
-  background-color: #111;
+  background-color: #1b3b86;
 }
 
 .logo {
@@ -28,56 +37,291 @@ header {
   align-items: center;
   justify-content: center;
   color: white;
-  background-color: #123;
+  background-color: blue;
 }
 
-.menu {
+.logo img {
+  width: 150px;
+}
+
+.menus {
   margin-left: auto;
   margin-top: auto;
-  background-color: #234;
   color: white;
   height: 80px;
   width: 800px;
+
+  display: flex;
+}
+
+.main-menu {
+  padding: 20px;
+  border: 3px solid #1b3b86;
+
+  width: 125px;
+}
+
+.main-menu:hover {
+  background-color: #1b3b86;
+}
+
+.sub-menu {
+  text-align: center;
+  border: 3px solid #1b3b86;
+
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: 0.3s;
+  
+  display: block;
+  position: absolute; 
+  z-index: 5;
+  width: 128px;
+}
+
+.sub-menu > li:hover {
+  background-color: #1b3b86;
 }
 
 .slides {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 350px;
-  background-color: #345;
+}
+
+.slide {
+  position: absolute;
+  width: 1600px;
+
+  opacity: 0;  /* ✅ 기본 숨김 */
+  transition: 0.5s ease;  /* ✅ 추가 */
+}
+
+.slide img {
+  width: 1500px;
+  height: 350px;
+
+  transition: 0.5s ease;  /* ✅ 추가 */
+}
+
+.slide p {
+  position: absolute;
+  display: block;
+
+  left: 50%;  
+  top: 50%;  
+
+  color: white;
 }
 
 .content {
-	height: 500px;
-	background-color: #456;
-	margin-top: -50px;
+  height: 500px;
+  margin-top: -100px;
+
+  display: block;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
 }
 
+.links {
+  height: 100px;
+
+  display: flex;
+  justify-items: center;
+  justify-content: space-evenly;
+
+  background-color: #1b3b86;
+}
+
+.link {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.link img {
+  border: 2px solid black;
+  margin-right: 15px;
+}
+
+.banner {
+  height: 150px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  border: 3px solid black;
+}
+
+.banner-detail {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.banner-img1 {
+  width: 120px;
+  height: 120px;
+
+  margin-right: 20px;
+}
+
+.banner-arrow {
+  width: 60px;
+  height: 60px;
+}
+
+.detail {
+  flex: 1;
+
+  display: flex;
+
+  border: 3px solid black;
+}
+
+.notice {
+  width: 670px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.notice-tab {
+  margin-left: -240px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  border-top: 3px solid #1b3b86;
+  border-bottom: 3px solid #1b3b86;
+  padding-bottom: 3px;
+}
+
+.notice-content {
+  border: 3px solid #1b3b86;
+  padding: 25px;
+}
+
+.notice-content li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.notice-content li:hover {
+  background-color: #1b3b86;
+  color: white;
+}
+
+.notice-content p {
+  margin-left: 15px;
+}
+
+.gallery {
+  width: 670px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery-tab {
+  border-top: 3px solid #1b3b86;
+  border-bottom: 3px solid #1b3b86;
+  padding-bottom: 3px;
+
+  margin-left: -240px;
+  margin-top: 12px;
+  margin-bottom: 10px;
+}
+
+.gallery-content {
+  display: flex;
+}
+
+.gallery-item {
+  margin: 20px;
+  text-align: center;
+}
+
+.gallery-item img {
+  border: 3px solid #1b3b86;
+}
+
+
 footer {
-	display: flex;
+  display: flex;
+  height: 120px;
 }
 
 .bdetail {
-	width: 1000px;
-	background-color: #567;
+  width: 1000px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #1b3b86;
 }
 
 .bcontent {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
 }
 
 .sns {
-	width: 340px;
-	background-color: #678;
+  width: 340px;
+  height: 60px;
 }
 
 .site {
-	width: 340px;
-	background-color: #789;
+  width: 340px;
+  height: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sit {
+  margin-right: 15px;
 }
 
 
+.modal {
+  background-color: #1b3b86;
+  position: absolute;
 
+  top: 50%;
+  left: 40%;
+  display: flex;
+  z-index: 20;
+
+  flex-direction: column;
+  opacity: 0;
+ 
+}
+
+.modal-content {
+  margin-top: 15px;
+}
+
+.modal-detail {
+  margin-bottom: 30px;
+}
+
+.modal-cancel {
+  width: 100px;
+  height: 20px;
+  color: block;
+  background-color: #1b3b86;
+  
+  margin-left: 700px;
+}
