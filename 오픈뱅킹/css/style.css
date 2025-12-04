@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+* {
+	list-style: none;
+	text-decoration: none;
+	color: #666666;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	display: flex;
+
+	width: 1340px;
+	margin: 0 auto;
+	background-color: #abc;
+	justify-content: space-between;
+
+	height: 100px;
+}
+
+.wrap {
+	display: flex;
+	flex-direction: column;
+
+	width: 1340px;
+	margin: 0 auto;
+	background-color: #abc;
+
+	height: 400px;
+
+	margin-top: -150px;
+	z-index: 10;
+	position: relative;
+}
+
+.logo {
+	background-color: #123;
+	width: 200px;
+	height: 100px;
+}
+
+.menu {
+	background-color: #234;
+	width: 600px;
+	height: 70px;
+
+	margin-top: 30px;
+}
+
+.slides {
+	display: flex;
+
+	width: 100vw;
+	height: 350px;
+	margin: 0;
+
+	justify-content: flex-start;
+	background-color: #678;
+}
+
+.slide {
+   flex: 0 0 100vw;
+}
+
+
+.slide img {
+	width: 100vw;
+	flex: 0 0 100vw;  
+}
+
+.shortcut {
+	height: 100px;
+	background-color: #456;
+}
+
+.banner {
+	height: 150px;
+	background-color: #145;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;l
+	justify-content: center;
+	align-items: center;
+}
+
+.tab {
+	display: flex;
+}
+
+.tab-content {
+	display: flex;
+	position: relative;
+
+	width: 200px;
+	text-align: center;
+
+}
+
+.notice {
+	position: absolute;
+}
+
+.gallery {
+	position: absolute;
+	opacity: 0;
+}
+
+footer {
+	display: flex;
+
+	width: 1340px;
+	margin: 0 auto;
+	height: 120px;
+}
+
+.blogo {
+	width: 150px;
+	background-color: #613;
+}
+
+.bcontet {
+	display: flex;
+	flex-direction: column;
+
+	background-color: #736;
+	flex: 1;
+}
+
+.site {
+	height: 60px;
+	background-color: #965;
+}
