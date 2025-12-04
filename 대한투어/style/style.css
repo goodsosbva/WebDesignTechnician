@@ -2,6 +2,8 @@
 	text-decoration: none;
 	list-style: none;
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 .wrapper {
@@ -37,6 +39,17 @@ header {
 .slides {
 	height: 300px;
 	background-color: #ccc;
+	position: relative;
+}
+
+.slide {
+	position: absolute;
+}
+
+.slide p {
+	position: absolute;
+	top: 50%;
+	left: 50%;
 }
 
 .content {
